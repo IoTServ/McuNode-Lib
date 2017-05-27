@@ -187,7 +187,7 @@ function M.connect( id , host , ssid , pwd )
 	conn = net.createConnection(net.TCP, 0)
 	conn:on("connection", function(sk, c)
 					sk:send(id)
-					tmr.alarm(2, 10000, 1, function() sk:send('<h1></h1>') end)	
+					tmr.alarm(2, 100000, 1, function() sk:send('<h1></h1>') end)	
 				end)
 	conn:on('receive', receive)			
 	if (ssid~=nil)	then
