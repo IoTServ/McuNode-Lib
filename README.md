@@ -35,7 +35,7 @@ mcunode.handle("/index.html",function(req,res)
   res.file = "indextpl.html" -- ... <h1>{{name}}</h1> ...
   return res
 end)
-mcunode.connect("<id>","<server-ip>","<ssid>","<wifi-password>")
+mcunode.connect("<id>","<server-ip>","<ssid>","<wifi-password>")   --or ：mcunode.connect("<id>","<server-ip>"） if connected to wifi already
 
 ```
 
