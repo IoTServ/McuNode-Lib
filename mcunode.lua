@@ -196,7 +196,7 @@ function M.connect( id , host , ssid , pwd )
 				end)
 	conn:on('receive', receive)			
 	if (ssid~=nil)	then
-        wifi.setmode(wifi.STATION)
+       		wifi.setmode(wifi.STATION)
 		wifi.sta.config(station_cfg)    --set your ap info !!!!!!
 		wifi.sta.autoconnect(1)
 		tmr.alarm(1, 1000, 1, function() 
